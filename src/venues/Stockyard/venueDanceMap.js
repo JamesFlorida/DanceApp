@@ -43,7 +43,7 @@ const venueDanceMap = [
 { id: 214, playlist: "Stock-016", daytaught: "Weekend" },
 { id: 213, playlist: "Stock-014", daytaught: "Wednesday" },
 { id: 212, playlist: "Stock-012", daytaught: "Wednesday" },
-{ id: 211, playlist: "Stock-005", daytaught: "Wednesday" },
+{ id: 211, playlist: "Stock-005", daytaught: "Weekend" },
 { id: 210, playlist: "Stock-017", daytaught: "Weekend" },
 { id: 209, playlist: "Stock-017", daytaught: "Weekend" },
 { id: 208, playlist: "Stock-014", daytaught: "Wednesday" },
@@ -143,11 +143,11 @@ const venueDanceMap = [
 { id: 113, playlist: "Stock-009", daytaught: "Wednesday" },
 { id: 112, playlist: "Stock-010", daytaught: "Weekend" },
 { id: 111, playlist: "Stock-009", daytaught: "Weekend" },
-{ id: 110, playlist: "Stock-006", daytaught: "Wednesday" },
+{ id: 110, playlist: "Stock-006", daytaught: "Tuesday" },
 { id: 109, playlist: "Stock-009", daytaught: "Wednesday" },
 { id: 108, playlist: "Stock-009", daytaught: "Wednesday" },
 { id: 107, playlist: "Stock-009", daytaught: "Wednesday" },
-{ id: 106, playlist: "Mixed Bag", daytaught: "Wednesday" },
+{ id: 106, playlist: "Mixed Bag", daytaught: "" },
 { id: 105, playlist: "Mixed Bag", daytaught: "Wednesday" },
 { id: 104, playlist: "Mixed Bag", daytaught: "Wednesday" },
 { id: 103, playlist: "Mixed Bag", daytaught: "Wednesday" },
@@ -165,7 +165,7 @@ const venueDanceMap = [
 { id: 89, playlist: "Stock-003", daytaught: "Tuesday" },
 { id: 88, playlist: "Stock-007", daytaught: "Wednesday" },
 { id: 87, playlist: "Stock-008", daytaught: "Wednesday" },
-{ id: 83, playlist: "Stock-009", daytaught: "Wednesday" },
+{ id: 83, playlist: "Stock-009", daytaught: "Weekend" },
 { id: 82, playlist: "Stock-007", daytaught: "Wednesday" },
 { id: 81, playlist: "Stock-005", daytaught: "Wednesday" },
 { id: 80, playlist: "Stock-008", daytaught: "Wednesday" },
@@ -176,7 +176,6 @@ const venueDanceMap = [
 { id: 75, playlist: "Stock-004", daytaught: "Wednesday" },
 { id: 74, playlist: "Stock-004", daytaught: "Wednesday" },
 { id: 73, playlist: "Stock-010", daytaught: "Weekend" },
-{ id: 72, playlist: "Stock-002", daytaught: "Wednesday" },
 { id: 71, playlist: "Stock-008", daytaught: "Wednesday" },
 { id: 70, playlist: "Stock-005", daytaught: "Wednesday" },
 { id: 68, playlist: "Stock-007", daytaught: "Wednesday" },
@@ -204,7 +203,6 @@ const venueDanceMap = [
 { id: 38, playlist: "Stock-003", daytaught: "Wednesday" },
 { id: 37, playlist: "Stock-006", daytaught: "Wednesday" },
 { id: 36, playlist: "Stock-007", daytaught: "Tuesday" },
-{ id: 35, playlist: "Stock-002", daytaught: "Wednesday" },
 { id: 34, playlist: "Stock-012", daytaught: "Wednesday" },
 { id: 33, playlist: "Stock-005", daytaught: "Wednesday" },
 { id: 32, playlist: "Stock-005", daytaught: "Wednesday" },
@@ -212,7 +210,7 @@ const venueDanceMap = [
 { id: 29, playlist: "Stock-019", daytaught: "Weekend" },
 { id: 28, playlist: "Mixed Bag", daytaught: "Wednesday" },
 { id: 27, playlist: "Mixed bag", daytaught: "Wednesday" },
-{ id: 26, playlist: "Mixed Bag", daytaught: "Wednesday" }
+{ id: 26, playlist: "Mixed Bag", daytaught: "" }
 
 
 
