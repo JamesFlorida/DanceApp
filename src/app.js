@@ -387,7 +387,7 @@ function generateInfoNotesHTML() {
 
         <div class="info-note">
             <h3>About the App</h3>
-            <p>This app is offered free for Stockyard dancers. It was written by, and maintained by, a fellow Stockyard dancer.</p>
+            <p>This app is offered free for Line dancers. It was written by, and maintained by, a fellow Line dancer.</p>
         </div>
 
 
@@ -396,7 +396,7 @@ function generateInfoNotesHTML() {
             <h3>Sharing</h3>
             <p>
             Feel free to share this app with anyone — it’s completely free.  
-            Just have them scan the QR code, then have them save it to their home screen (they will see the Stockyard Bull icon).<br>
+            Just have them scan the QR code, then have them save it to their home screen (they will see the Boots icon).<br>
         </p>
 
         <img src="images/stockyard_qr.png" class="info-qr">
@@ -404,7 +404,7 @@ function generateInfoNotesHTML() {
 
         <div class="info-note">
             <h3>What Kind of App Is This?</h3>
-            <p>This is a web app, not a traditional app store download. The app is updated regularly with the latest Stockyard dances.<br>
+            <p>This is a web app, not a traditional app store download. The app is updated regularly with the latest dances.<br>
             If new dances don’t appear, close the app (swipe close), then reopen the app, and the latest version with latest dance updates will load.<br>
              </p>
         </div>
@@ -412,7 +412,7 @@ function generateInfoNotesHTML() {
         <div class="info-note">
             <h3>How to Use It</h3>
             <p>
-                • You may click any playlist (for Example "Tuesday", to see dances taught at Stockyard on Tuesday).<br>
+                • You may click any playlist (for Example "Tuesday", to see dances taught at on Tuesday).<br>
                 • You can create your own practice list by clicking "Manage User Playlists"<br>
                 • Enter a playlist name and click "Create". <br>
                 • In the search bar, type letters ("sing" to find all dances with "sing", such as "single again"<br>
@@ -427,7 +427,7 @@ function generateInfoNotesHTML() {
 
         <div class="info-note">
             <h3>Responsibility & Contact</h3>
-            <p>Stockyard management and staff are not responsible for the app or its content.<br>
+            <p>Management and staff are not responsible for the app or its content.<br>
             Suggestions or comments: <strong>tampadancing@gmail.com</strong></p>
         </div>
 
