@@ -1,7 +1,7 @@
 export const venueConfig = {
-    name: "The Stockyard",
-    headerTitle: "The Stockyard Dance Player",
-    searchPlaceholder: "Search Stockyard roster...",
+    name: "The Dance Place",
+    headerTitle: "The Line Dance App",
+    searchPlaceholder: "Search roster...",
     email: "tampadancing@gmail.com",
 
     theme: {
@@ -21,6 +21,6 @@ export const venueConfig = {
     }
 };
 
-console.log("Loaded NEW Stockyard venueConfig");
+console.log("Loaded NEW Dance Place venueConfig");
 
 
