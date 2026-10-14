@@ -383,7 +383,20 @@ function generateInfoNotesHTML() {
             Version ${window.APP_VERSION}<br>
             </p>
 
-        </div>
+
+<div class="info-note">
+    <h3>What’s New</h3>
+    <p>
+        Welcome to the updated Line Dance Player! The app now has a cleaner design and a new name —
+        <strong>Boots Line Dance App</strong>. It’s being prepared for future growth, including support for multiple venues.
+        Over time, you may start seeing dances from different locations mixed together — this reflects the way dancers move 
+        around the Tampa Bay area and share favorites. The goal is simple: keep you connected, keep you learning, and 
+        keep you dancing. More updates will roll out gradually.
+    </p>
+</div>
+
+
+        
 
         <div class="info-note">
             <h3>About the App</h3>
@@ -882,7 +895,8 @@ if (lastNavigationMode === "user-playlist" && activeUserPlaylistView !== null) {
                 <div class="hub-card-title">ALL Dances (${countAllDances()})</div>
             </div>
 
-            <button class="hub-btn" onclick="navigateToInfoPage()">App Info</button>
+           <!-- <button class="hub-btn" onclick="navigateToInfoPage()">App Info</button> -->
+
         </div>
         `;
 
