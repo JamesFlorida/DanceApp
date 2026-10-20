@@ -385,6 +385,11 @@ function generateInfoNotesHTML() {
 
 
 <div class="info-note">
+    <h3>Thank you Maurice !</h3>
+    <p>
+        We are so fortunate to have such a great instructor!<br>
+        Knowledge, dance skills, clarity, consistency, patience, kindness, and humor are but a few of the many gifts Maurice brings to class.
+        Be sure to thank him for what he does.<br>
     <h3>What’s New</h3>
     <p>
         This weeks dances :<br>
