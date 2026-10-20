@@ -1523,7 +1523,7 @@ button:disabled {
 /* Balance hub buttons so both match visually */
 /* MUP button: small text for 3-line label */
 .hub-mup-button {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 1.1 !important;
     padding: 8px 16px !important;
 }
