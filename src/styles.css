@@ -1520,11 +1520,25 @@ button:disabled {
 
 /* Override hub-mup-button and hub-events-button sizing to prevent text clipping on MUP button */
 /* Reduce font size of hub buttons for better visual balance */
-.hub-mup-button,
+/* Balance hub buttons so both match visually */
+/* MUP button: small text for 3-line label */
+.hub-mup-button {
+    font-size: 12px !important;
+    line-height: 1.1 !important;
+    padding: 8px 16px !important;
+}
+
+/* Events button: larger text so single word doesn't look tiny */
 .hub-events-button {
-    font-size: 14px !important;
+    font-size: 15px !important;
     line-height: 1.2 !important;
     padding: 8px 16px !important;
+}
+
+/* Force both buttons to the same height */
+.hub-mup-button,
+.hub-events-button {
+    height: 58px !important;   /* adjust to taste */
 }
 
 
