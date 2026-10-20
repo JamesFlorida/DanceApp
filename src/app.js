@@ -394,13 +394,9 @@ function generateInfoNotesHTML() {
     <p>
         This weeks dances :<br>
         Tuesday:<br> 
-            - A Bar Song<br>
-            - Not at This Party<br>
-            - Footloose Cowgirl<br>
+            - A Bar Song / Not at this Party / Footloose Cowgirl<br>
         Wednesday:<br>
-            - Stomp 2,3,4<br>
-            - Hurts So Bad<br>
-            - Another Drink<br>
+            - Stomp 2,3,4 / Hurts So Bad / Another Drink<br>
         Weekend:<br>
             -Kingdom of Fear<br>
             -Keep Up With a Cowgirl (NOTE! I only see a French Stepsheet in Copperknob), but your browser will translate.<br>
