@@ -387,11 +387,20 @@ function generateInfoNotesHTML() {
 <div class="info-note">
     <h3>What’s New</h3>
     <p>
-        Welcome to the updated Line Dance Player! The app now has a cleaner design and a new name —
-        <strong>Boots Line Dance App</strong>. It’s being prepared for future growth, including support for multiple venues.
-        Over time, you may start seeing dances from different locations mixed together — this reflects the way dancers move 
-        around the Tampa Bay area and share favorites. The goal is simple: keep you connected, keep you learning, and 
-        keep you dancing. More updates will roll out gradually.
+        This weeks dances :
+        Tuesday: 
+            - A Bar Song
+            - Not at This Party
+            - Footloose Cowgirl
+        Wednesday:
+            - Stomp 2,3,4
+            - Hurts So Bad
+            - Another Dirnk
+        Weekend:
+            -Kingdom of Fear
+            -Keep Up With a Cowgirl (NOTE! I only see a French Stepsheet in Copperknob), but your browser will translate.
+            -Surprise
+        
     </p>
 </div>
 
