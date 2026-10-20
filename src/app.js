@@ -453,7 +453,7 @@ function generateInfoNotesHTML() {
 
         <div class="info-note">
             <h3>Final Note</h3>
-            <p>I hope this app helps you learn, practice, and enjoy dancing even more. Have fun!</p>
+            <p>I hope this app helps you learn, practice, and enjoy dancing even more. Have fun!  Email developer at tampadancing@gmail.com</p>
         </div>
     `;
 }
