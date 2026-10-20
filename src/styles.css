@@ -339,6 +339,8 @@ object {
     margin: 12px 0;
 }
 
+
+/* NOTE: Height override for these buttons(below)  is applied at EOF. Do not adjust height here. */
 .hub-mup-button,
 .hub-events-button {
     flex: 1;
@@ -1513,6 +1515,15 @@ button:disabled {
 
 .workspace-delete-btn:hover {
   background: #e00;
+}
+
+
+/* Override hub-mup-button and hub-events-button sizing to prevent text clipping on MUP button */
+.hub-mup-button,
+.hub-events-button {
+    height: auto !important;
+    padding: 10px 20px !important;
+    line-height: 1.2 !important;
 }
 
 
