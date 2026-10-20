@@ -405,8 +405,6 @@ function generateInfoNotesHTML() {
 </div>
 
 
-        
-
         <div class="info-note">
             <h3>About the App</h3>
             <p>This app is offered free for Line dancers. It was written by, and maintained by, a fellow Line dancer.</p>
