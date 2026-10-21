@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<pre id="out">Loading…</pre>
+<script>
+fetch("https://gentle-river-58db.james-x-hassett-ef8.workers.dev")
+  .then(r => r.json())
+  .then(j => out.textContent = JSON.stringify(j, null, 2))
+  .catch(e => out.textContent = "Error: " + e);
+</script>
+</body>
+</html>
