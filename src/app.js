@@ -420,7 +420,7 @@ function generateInfoNotesHTML() {
             Just have them scan the QR code, then have them save it to their home screen (they will see the Boots icon).<br>
         </p>
 
-        <img src="images/stockyard_qr.png" class="info-qr">
+        <img src="images/boots_qr.png" class="info-qr">
         </div>
 
         <div class="info-note">
