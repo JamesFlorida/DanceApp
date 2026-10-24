@@ -23,23 +23,6 @@
     opacity: 0.8;
 }
 
-/* Playlist Tiles (Venue Theme) */
-.playlist-tile {
-    background-color: #1a1a1a;
-    border: 2px solid #800000;
-    border-radius: 8px;
-    padding: 12px;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.9);
-    transition: transform 0.1s ease-in-out;
-}
-
-.playlist-tile:hover {
-    transform: scale(1.03);
-    border-color: #800000;
-    box-shadow: 3 3 14px rgba(255, 0, 0, 0.9);
-}
-
 /* Overlay Windows */
 .inapp-overlay-window,
 .overlay-viewport-iframe {
