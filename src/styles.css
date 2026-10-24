@@ -10,12 +10,23 @@
   --venue-bg-image: none;
 }
 
+/* Header + Logo  */
+.venue-logo {
+    height: 80px;
+    filter: drop-shadow(0 0 12px rgba(255, 180, 60, 0.7));
+    transition: transform 0.3s ease;
+}
+
+.venue-logo:hover {
+    transform: scale(1.05);
+}
+
 /* ============================================================
    GLOBAL — BODY & BASE PAGE SETTINGS
    ============================================================ */
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--dark-gray);
+  background-color: #000;
   background-image: var(--venue-bg-image);
   background-size: cover;
   background-repeat: no-repeat;
@@ -181,10 +192,13 @@ body {
    GLOBAL — DANCE LIST LAYOUT
    ============================================================ */
 .dance-entry-card {
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-left: 16px solid #800000;
 }
 
 .title-line {
@@ -453,12 +467,6 @@ object {
   padding: 8px 16px 0 16px;
 }
 
-#daySelect,
-#difficultySelect {
-  flex: 1;
-  height: 50px;
-}
-
 /* ============================================================
    HUB SCREEN — FEEDBACK EMAIL (ALL DEVICES)
    ============================================================ */
@@ -657,6 +665,7 @@ body:not(.workspace-mode-edit) #workspacePlaylistSelection {
    SCROLLABLE WORKSPACE CONTENT ABOVE FIXED FOOTER
    ============================================================ */
 .workspace-screen {
+    background-color: transparent;
     min-height: 100vh;
     height: 100vh;
     padding: 80px 20px 20px 20px; /* top padding = header-bar height */
@@ -1540,7 +1549,51 @@ button:disabled {
 .hub-events-button {
     height: 58px !important;   /* adjust to taste */
 }
+/* Dance Data Panels (Venue Theme) */
+.dance-data-container,
+.dance-data-wrapper,
+.dance-data-panel,
+.dance-data-sidebar,
+.dance-data-content,
+.dance-data-body {
+    background-color: transparent !important;
+}
 
+.dance-data-container *,
+.dance-data-wrapper *,
+.dance-data-panel *,
+.dance-data-sidebar *,
+.dance-data-content *,
+.dance-data-body *,
+.overlay-content *,
+.overlay-body *,
+.overlay-inner *,
+.overlay-frame * {
+    border-color: #800000 !important;
+}
+
+#instantSplash {
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 9999;
+}
+
+.instantSplashLogo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.instantSplashText {
+    opacity: 0.8;
+}
 
 
 
