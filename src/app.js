@@ -1,15 +1,15 @@
 
 console.log("9.18.26 at 10:20am");
 // Change notes in function generateInfoNotesHTML()
-// Change venue events in file venueEvents.js
+
 /* ============================================
    IMPORTS      
 ============================================ */
 import { danceData } from './venues/Stockyard/danceData-stockyard.js';
 // import { globalDanceList } from "./globalDanceList.js";
 import { venueDanceMap } from "./venues/Stockyard/venueDanceMap.js";
-import { venueConfig } from "./venues/Stockyard/venueConfig.js";
-import { venueEvents } from "./venues/Stockyard/venueEvents.js";
+// import { venueConfig } from "./venues/Stockyard/venueConfig.js";
+//import { venueEvents } from "./venues/Stockyard/venueEvents.js";
 import { savePlaylist, loadPlaylist, deletePlaylist } from './db.js';
 
 navigator.storage && navigator.storage.persist();
@@ -162,109 +162,6 @@ loadPlaylist("userPlaylists").then(result => {
 
 //   let allDances = danceData;       // Shared dataset
 
-/* ============================================
-   VENUE BRANDING
-============================================ */
-function initializeVenueBranding() {
-    const headerTitleEl = document.getElementById('applicationHeaderTitle');
-    if (headerTitleEl) {
-        headerTitleEl.innerText =
-            venueConfig.headerTitle ||
-            venueConfig.name ||
-            "LineDance Player";
-    }
-
-    const searchInput = document.getElementById('danceSearchInput');
-    if (searchInput) {
-        searchInput.placeholder =
-            venueConfig.searchPlaceholder ||
-            "Search dances...";
-    }
-
-    const emailBanner = document.getElementById('venueEmailBanner');
-    if (emailBanner) {
-        const venueName = venueConfig.name || "LineDance Player";
-        const email = venueConfig.email || "";
-        emailBanner.innerText =
-            email ? `✉ ${venueName} Feedback & Music Requests: ${email}` : "";
-    }
-
-    if (venueConfig.theme) {
-        const root = document.documentElement;
-        root.style.setProperty('--brand-green', venueConfig.theme.brandGreen || '#2ecc71');
-        root.style.setProperty('--dark-gray', venueConfig.theme.darkGray || '#1e1e1e');
-        root.style.setProperty('--card-bg', venueConfig.theme.cardBg || '#2b2b2b');
-        root.style.setProperty('--btn-blue', venueConfig.theme.buttonBlue || '#34495e');
-    }
-
-    if (venueConfig.assets.backgroundImageUrl) {
-        document.documentElement.style.setProperty(
-            '--venue-bg-image',
-            `url(${venueConfig.assets.backgroundImageUrl})`
-        );
-    } else {
-        document.documentElement.style.setProperty('--venue-bg-image', 'none');
-    }
-
-    const bannerEl = document.getElementById('venueBanner');
-    if (bannerEl) {
-        if (venueConfig.assets.bannerUrl) {
-            bannerEl.src = venueConfig.assets.bannerUrl;
-            bannerEl.style.display = 'block';
-        } else {
-            bannerEl.style.display = 'none';
-        }
-    }
-
-    const instructorEl = document.getElementById('venueInstructorPhoto');
-    if (instructorEl) {
-        if (venueConfig.assets.instructorPhotoUrl) {
-            instructorEl.src = venueConfig.assets.instructorPhotoUrl;
-            instructorEl.style.display = 'block';
-        } else {
-            instructorEl.style.display = 'none';
-        }
-    }
-
-    const watermarkEl = document.getElementById('venueWatermark');
-    if (watermarkEl) {
-        if (venueConfig.assets.watermarkUrl) {
-            watermarkEl.src = venueConfig.assets.watermarkUrl;
-            watermarkEl.style.display = 'block';
-        } else {
-            watermarkEl.style.display = 'none';
-        }
-    }
-
-    const footerEl = document.getElementById('venueFooter');
-    if (footerEl) {
-        footerEl.innerText = venueConfig.footerText || "";
-    }
-
-    const touchIconEl = document.getElementById('venueTouchIcon');
-    if (touchIconEl) {
-        touchIconEl.href = venueConfig.assets.touchIconUrl || "";
-    }
-
-    const splashEl = document.getElementById('venueSplash');
-    const splashImgEl = document.getElementById('venueSplashImage');
-    const splashTextEl = document.getElementById('venueSplashText');
-
-    if (splashEl && splashImgEl && splashTextEl) {
-        if (venueConfig.assets.splashImageUrl) {
-            splashImgEl.src = venueConfig.assets.splashImageUrl;
-            splashTextEl.innerText =
-                venueConfig.headerTitle ||
-                venueConfig.name ||
-                "LineDance Player";
-
-            splashEl.style.display = 'flex';
-            setTimeout(() => splashEl.style.display = 'none', 1500);
-        } else {
-            splashEl.style.display = 'none';
-        }
-    }
-}
 function setHubHeaderTitle(title) {
     const titleEl = document.getElementById('applicationHeaderTitle');
     if (titleEl) {
@@ -332,10 +229,12 @@ function restoreHubHeader() {
 
     // Restore hub title
     const titleEl = document.getElementById('applicationHeaderTitle');
+    /*
     if (titleEl) {
         titleEl.style.display = 'inline';
         titleEl.innerText = venueConfig.headerTitle || venueConfig.name || "";
     }
+    */
 }
 
 /* ============================================
@@ -967,65 +866,6 @@ function openAllDances() {
     selectedActivePlaylistGroup = null;
     lastNavigationMode = "all";
     renderApplicationInterface();
-}
-
-function openEventsView() {
-    console.log("fIRST LINE IN Open Events View");
-    activatePlaylistHeader("Events");
-    const viewport = document.getElementById("masterApplicationViewport");
-    viewport.innerHTML = "";
-    renderEventsScreen();
-}
-
-function renderEventsScreen() {
-    const viewport = document.getElementById("masterApplicationViewport");
-
-    viewport.innerHTML = `
-        <div class="events-screen">
-
-            <div class="events-left-column">
-                <h2 class="workspace-section-title">Upcoming Events</h2>
-                <div id="eventsList" class="events-list"></div>
-            </div>
-
-            <div class="events-right-column">
-                <button class="workspace-cancel-btn" onclick="returnToHub()">
-                    Back
-                </button>
-            </div>
-
-        </div>
-    `;
-
-    renderEventsList();
-}
-
-function renderEventsList() {
-    const container = document.getElementById("eventsList");
-    container.innerHTML = "";
-
-    venueEvents.forEach(evt => {
-        const card = document.createElement("div");
-        card.className = "event-card";
-
-        card.innerHTML = `
-            <img src="${evt.image}" class="event-image" />
-
-            <div class="event-info">
-                <div class="event-title">${evt.title}</div>
-                <div class="event-date">${evt.date}</div>
-                <div class="event-price">${evt.price}</div>
-
-                ${evt.link ? `
-                    <a href="${evt.link}" target="_blank" class="event-link">
-                        Tickets & Info
-                    </a>
-                ` : ``}
-            </div>
-        `;
-
-        container.appendChild(card);
-    });
 }
 
 
@@ -2171,7 +2011,7 @@ function updateHubVisibility() {
    INITIALIZE APP
 ============================================ */
 window.onload = function () {
-    initializeVenueBranding();
+    //initializeVenueBranding();
     renderApplicationInterface();   // First render (empty playlists)
     initializeUserPlaylists();      // Second render (with playlists)
 
@@ -2422,7 +2262,6 @@ window.renderWorkspaceDeleteList = renderWorkspaceDeleteList;
 window.beginWorkspacePhase2 = beginWorkspacePhase2;
 window.renderDeleteModeLayout = renderDeleteModeLayout;
 window.cancelWorkspace = cancelWorkspace;
-window.openEventsView = openEventsView;
 window.returnToHub = returnToHub;
 window.openHubPlaylist = openHubPlaylist;
 window.openManageUserPlaylists = openManageUserPlaylists;
