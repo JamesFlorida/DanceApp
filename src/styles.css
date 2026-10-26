@@ -42,7 +42,6 @@ body {
 .workspace-mode-panel {
     display: grid;
     grid-template-columns: 1fr;
-    /* removed row-gap: 20px */
     max-width: 600px;
     margin: 0 auto;
 }
@@ -741,8 +740,8 @@ body.workspace-mode-select #workspaceContent {
     flex-direction: row;
     gap: 12px;
     padding: 0 12px;
-    flex-wrap: nowrap;
-}
+    flex-wrap: nowrap; 
+  }
 
   /* Phone: column padding */
   .workspace-column-left,
@@ -750,7 +749,7 @@ body.workspace-mode-select #workspaceContent {
     flex: 1;
     padding: 20px 12px;
     overflow-y: auto;
-}
+  }
 
 
   /* Phone: section titles */
@@ -773,25 +772,21 @@ body.workspace-mode-select #workspaceContent {
   flex-direction: row;      /* side-by-side */
   gap: 10px;
   margin-top: 16px;
-}
+  }
 
   .workspace-save-btn,
   .workspace-cancel-btn {
   /*  width: 50%;                equal width buttons */
   font-size: 15px;
   padding: 12px;
-}
+  }
 
   /* Phone: mode buttons (Create / Edit / Delete) */
  .workspace-mode-panel {
     margin-bottom: 12px;
-    display: grid;
-    grid-template-columns: 1fr;   /* one button per row */
-    /* removed  row-gap: 20px; */        
-}
+  }
 
-    .workspace-mode-btn {
-    margin-bottom: 4px;
+ .workspace-mode-btn {
     padding: 12px 16px;     /* increased vertical height */
     border-radius: 6px;
     border: none;
@@ -799,10 +794,9 @@ body.workspace-mode-select #workspaceContent {
     font-size: 15px;        /* slightly larger */
     background: #444;
     color: #fff;
-}
+  }
 
-   .workspace-mode-desc {
-    margin-top: 4px;
+ .workspace-mode-desc {
     margin-bottom: 20px;
    }
 
@@ -1131,7 +1125,6 @@ body.workspace-mode-select #workspaceContent {
   border: 1px solid #555;
   cursor: pointer;
   font-size: 1.15rem;
-  background: #222;
   color: #fff;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);

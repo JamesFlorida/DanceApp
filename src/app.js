@@ -6,12 +6,8 @@ console.log("9.18.26 at 10:20am");
    IMPORTS      
 ============================================ */
 import { danceData } from './venues/Stockyard/danceData-stockyard.js';
-// import { globalDanceList } from "./globalDanceList.js";
 import { venueDanceMap } from "./venues/Stockyard/venueDanceMap.js";
-// import { venueConfig } from "./venues/Stockyard/venueConfig.js";
-//import { venueEvents } from "./venues/Stockyard/venueEvents.js";
 import { savePlaylist, loadPlaylist, deletePlaylist } from './db.js';
-
 navigator.storage && navigator.storage.persist();
 
 /* ============================================
@@ -229,12 +225,7 @@ function restoreHubHeader() {
 
     // Restore hub title
     const titleEl = document.getElementById('applicationHeaderTitle');
-    /*
-    if (titleEl) {
-        titleEl.style.display = 'inline';
-        titleEl.innerText = venueConfig.headerTitle || venueConfig.name || "";
-    }
-    */
+   
 }
 
 /* ============================================
