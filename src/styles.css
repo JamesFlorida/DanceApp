@@ -36,6 +36,12 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Disabled buttons look dim on mobile */
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 /* ============================================================
    WORKSPACE — MODE PANEL (DESKTOP/TABLET)
    ============================================================ */
@@ -353,19 +359,21 @@ object {
 }
 
 
-/* NOTE: Height override for these buttons(below)  is applied at EOF. Do not adjust height here. */
 .hub-mup-button,
 .hub-events-button {
     flex: 1;
-    height: 50px; /* match playlist card height */
-    font-size: 16px;
+    height: 58px; 
+    font-size: 15px;
     font-weight: 500;
     border-radius: 8px;
     background-color: #444;
     color: white;
     border: none;
     cursor: pointer;
+    line-height: 1.1;
+    padding: 8px 16px;
 }
+
 
 /* Venue optional elements */
 .venue-banner {
@@ -1127,7 +1135,7 @@ body.workspace-mode-select #workspaceContent {
   font-size: 1.15rem;
   color: #fff;
   text-align: left;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 4px rgba(228, 5, 5, 0.647);
 }
 
 .workspace-mode-btn:hover {
@@ -1369,9 +1377,9 @@ body.workspace-phase1 .workspace-name-box {
 }
 /* ============================================================
    EVENTS — CARD LAYOUT
-   ============================================================ */
+  
 .events-screen {
-    padding-top: 60px; /* same spacing used by playlist screens */
+    padding-top: 60px; 
 }
 
 .events-list {
@@ -1426,14 +1434,10 @@ body.workspace-phase1 .workspace-name-box {
     border-radius: 6px;
     text-decoration: none;
 }
-/* Disabled buttons look dim on mobile */
-button:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
+ ============================================================ */
 
 /* --------------------------------------------
-   INFO PAGE    added 9.15.26
+   START - INFO PAGE    added 9.15.26
    -------------------------------------------- */
 .info-content {
     padding: 20px;
@@ -1449,12 +1453,6 @@ button:disabled {
     margin-top: 0;
 }
 
-.workspace-logo-small {
-    height: 32px;
-    width: auto;
-    margin-left: auto;
-}
-
 .info-qr {
     display: block;
     width: 160px;        /* adjust as needed */
@@ -1462,9 +1460,12 @@ button:disabled {
     margin: 12px auto;   /* centers it */
     border-radius: 8px;  /* optional: soft corners */
 }
+/* --------------------------------------------
+   END - INFO PAGE 
+   -------------------------------------------- */
 
 /* ============================================================
-   WORKSPACE — DELETE PLAYLIST ROWS (MATCH EDIT MODE EXACTLY)
+   START - WORKSPACE — DELETE PLAYLIST ROWS (MATCH EDIT MODE EXACTLY)
    ============================================================ */
 
 .workspace-delete-item {
@@ -1483,7 +1484,7 @@ button:disabled {
   cursor: pointer;                  /* same feel as edit rows */
 
   transition: background 0.2s, transform 0.1s;
-}
+   }
 
 .workspace-delete-item:hover {
   background: #3a3a3a;              /* same hover color */
@@ -1518,30 +1519,10 @@ button:disabled {
 .workspace-delete-btn:hover {
   background: #e00;
 }
+/* ============================================================
+   END - WORKSPACE — DELETE PLAYLIST ROWS (MATCH EDIT MODE EXACTLY)
+   ============================================================ */
 
-
-/* Override hub-mup-button and hub-events-button sizing to prevent text clipping on MUP button */
-/* Reduce font size of hub buttons for better visual balance */
-/* Balance hub buttons so both match visually */
-/* MUP button: small text for 3-line label */
-.hub-mup-button {
-    font-size: 14px !important;
-    line-height: 1.1 !important;
-    padding: 8px 16px !important;
-}
-
-/* Events button: larger text so single word doesn't look tiny */
-.hub-events-button {
-    font-size: 15px !important;
-    line-height: 1.2 !important;
-    padding: 8px 16px !important;
-}
-
-/* Force both buttons to the same height */
-.hub-mup-button,
-.hub-events-button {
-    height: 58px !important;   /* adjust to taste */
-}
 /* Dance Data Panels (Venue Theme) */
 .dance-data-container,
 .dance-data-wrapper,
