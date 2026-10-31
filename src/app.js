@@ -2235,8 +2235,32 @@ async function initializeUserPlaylists() {
     }
 }
 
+function showWakeDiagnostic(eventName) {
+    let diagnostic = document.getElementById("wakeDiagnostic");
+
+    if (!diagnostic) {
+        diagnostic = document.createElement("div");
+        diagnostic.id = "wakeDiagnostic";
+
+        diagnostic.style.position = "fixed";
+        diagnostic.style.bottom = "10px";
+        diagnostic.style.left = "10px";
+        diagnostic.style.zIndex = "99999";
+        diagnostic.style.background = "yellow";
+        diagnostic.style.color = "black";
+        diagnostic.style.padding = "6px 10px";
+        diagnostic.style.fontSize = "14px";
+
+        document.body.appendChild(diagnostic);
+    }
+
+    diagnostic.textContent =
+        "Wake event: " + eventName + " — " + new Date().toLocaleTimeString();
+}
+
 document.addEventListener("visibilitychange", () => {
   if (!document.hidden) {
+    showWakeDiagnostic("visibilitychange");
     // User returned to the app
     //sendResumeEvent();
     checkForUpdate();
@@ -2245,12 +2269,13 @@ document.addEventListener("visibilitychange", () => {
 
 window.addEventListener("pageshow", () => {
     console.log("TEST DIAGNOSTIC: pageshow fired");
+    showWakeDiagnostic("pageshow");
 });
 
 window.addEventListener("focus", () => {
     console.log("TEST DIAGNOSTIC: focus fired");
+    showWakeDiagnostic("focus");
 });
-
 
 
 /* ============================================
