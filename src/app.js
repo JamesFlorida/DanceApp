@@ -13,23 +13,12 @@ navigator.storage && navigator.storage.persist();
 /* ============================================
    VERSION SYSTEM
 ============================================ */
+const RUNNING_APP_VERSION = "11.02.26 - test4";
 
 async function loadAppVersion() {
-    try {
-        const response = await fetch('version.json?v=' + Date.now(), {
-            cache: "no-store"
-        });
+    window.APP_VERSION = RUNNING_APP_VERSION;
 
-        const data = await response.json();
-
-        window.APP_VERSION = data.version;
-
-        console.log("App started with version:", window.APP_VERSION);
-
-    } catch (err) {
-        console.log("Could not load version.json", err);
-        window.APP_VERSION = "unknown";
-    }
+    console.log("App started with version:", window.APP_VERSION);
 }
 
 
