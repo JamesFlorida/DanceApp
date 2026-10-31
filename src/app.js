@@ -2242,11 +2242,11 @@ document.addEventListener("visibilitychange", () => {
 });
 
 window.addEventListener("pageshow", () => {
-    alert("TEST DIAGNOSTIC: pageshow fired");
+    console.log("TEST DIAGNOSTIC: pageshow fired");
 });
 
 window.addEventListener("focus", () => {
-    alert("TEST DIAGNOSTIC: focus fired");
+    console.log("TEST DIAGNOSTIC: focus fired");
 });
 
 
