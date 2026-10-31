@@ -2241,6 +2241,15 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
+window.addEventListener("pageshow", () => {
+    alert("TEST DIAGNOSTIC: pageshow fired");
+});
+
+window.addEventListener("focus", () => {
+    alert("TEST DIAGNOSTIC: focus fired");
+});
+
+
 
 /* ============================================
    GLOBAL EXPORTS (Required for HTML onclick)
