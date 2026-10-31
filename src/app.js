@@ -2270,6 +2270,7 @@ document.addEventListener("visibilitychange", () => {
 window.addEventListener("pageshow", () => {
     console.log("TEST DIAGNOSTIC: pageshow fired");
     showWakeDiagnostic("pageshow");
+     checkForUpdate();
 });
 
 window.addEventListener("focus", () => {
