@@ -2032,6 +2032,7 @@ window.onload = function () {
     document.getElementById("instantSplash").style.display = "none";
 
     // ⭐ SEND LAUNCH EVENT TO CLOUDFLARE
+    /*
     console.log("Sending launch event to Cloudflare...");
     sendLaunchEvent({
         
@@ -2039,6 +2040,7 @@ window.onload = function () {
         venue: "Stockyard",
         timestamp: new Date().toISOString()
     });
+    */
 };
 
 
@@ -2236,7 +2238,7 @@ async function initializeUserPlaylists() {
 document.addEventListener("visibilitychange", () => {
   if (!document.hidden) {
     // User returned to the app
-    sendResumeEvent();
+    //sendResumeEvent();
     checkForUpdate();
   }
 });
