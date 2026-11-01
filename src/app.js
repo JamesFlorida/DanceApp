@@ -13,7 +13,7 @@ navigator.storage && navigator.storage.persist();
 /* ============================================
    VERSION SYSTEM
 ============================================ */
-const RUNNING_APP_VERSION = "11.02.26 - test7";
+const RUNNING_APP_VERSION = "11.02.26 - test8";
 
 async function loadAppVersion() {
     window.APP_VERSION = RUNNING_APP_VERSION;
