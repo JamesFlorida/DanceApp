@@ -5,15 +5,15 @@ console.log("9.18.26 at 10:20am");
 /* ============================================
    IMPORTS      
 ============================================ */
-import { danceData } from './venues/Stockyard/danceData-stockyard.js?v=11.02.26-test9';
-import { venueDanceMap } from "./venues/Stockyard/venueDanceMap.js?v=11.02.26-test9";
-import { savePlaylist, loadPlaylist, deletePlaylist } from './db.js?v=11.02.26-test9';
+import { danceData } from './venues/Stockyard/danceData-stockyard.js?v=11.02.26-test10';
+import { venueDanceMap } from "./venues/Stockyard/venueDanceMap.js?v=11.02.26-test10";
+import { savePlaylist, loadPlaylist, deletePlaylist } from './db.js?v=11.02.26-test10';
 navigator.storage && navigator.storage.persist();
 
 /* ============================================
    VERSION SYSTEM
 ============================================ */
-const RUNNING_APP_VERSION = "11.02.26 - test9";
+const RUNNING_APP_VERSION = "11.02.26 - test10";
 
 async function loadAppVersion() {
     window.APP_VERSION = RUNNING_APP_VERSION;
