@@ -770,12 +770,6 @@ if (lastNavigationMode === "user-playlist" && activeUserPlaylistView !== null) {
             </div>
             ` : ""}
 
-              ${countDay("Key Vista") > 0 ? `
-            <div class="hub-card" onclick="openHubPlaylist(3)">
-                <div class="hub-card-title">Key Vista (${countDay("Key Vista")})</div>
-            </div>
-            ` : ""}
-
             ${countMixedBag() > 0 ? `
             <div class="hub-card" onclick="openHubPlaylist(4)">
                 <div class="hub-card-title">Mixed Bag (${countMixedBag()})</div>
@@ -2046,13 +2040,12 @@ const hubPlaylists = [
     "Tuesday",          // 1
     "Wednesday",        // 2
     "Weekend",          // 3
-    "Key Vista",        // 4
-    "Mixed Bag",        // 5
-    "Beginner",         // 6
-    "Improver",         // 7
-    "Intermediate",     // 8
-    "Advanced",         // 9
-    "ALL Dances"        // 10
+    "Mixed Bag",        // 4
+    "Beginner",         // 5
+    "Improver",         // 6
+    "Intermediate",     // 7
+    "Advanced",         // 8
+    "ALL Dances"        // 9
 ];
 
 function openHubPlaylist(index) {
@@ -2067,7 +2060,6 @@ function openHubPlaylist(index) {
         case "Tuesday":
         case "Wednesday":
         case "Weekend":
-        case "Key Vista":
             openDayPlaylist(name);
             return;
 
