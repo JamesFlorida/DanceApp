@@ -1,5 +1,4 @@
 const venueDanceMap = [
-{ id: 245, playlist: "Stock-011", daytaught: "Key Vista" },
 { id: 244, playlist: "Stock-016", daytaught: "Key Vista" },
 { id: 243, playlist: "Stock -018",daytaught: "Key Vista" },
 { id: 258, playlist: "Stock-022", daytaught: "Weekend" },
