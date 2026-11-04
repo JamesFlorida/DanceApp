@@ -1,5 +1,5 @@
-
-console.log("9.18.26 at 10:20am");
+//  Enter at PS prompt to update versioning     .\src\venues\Stockyard\update-version.ps1
+// Use ctrl-C if necessary to stop script prematurely if something needs done before updating version.
 // Change notes in function generateInfoNotesHTML()
 
 /* ============================================
