@@ -128,7 +128,7 @@ venueDanceMap.forEach(entry => {
     if (base) {
         localDanceDatabase.push({
             ...base,
-            playlist: entry.playlist,
+            // playlist: entry.playlist,
             daytaught: entry.daytaught
         });
     }
@@ -518,11 +518,11 @@ function countDifficulty(levelName) {
 function countAllDances() {
     return localDanceDatabase.length;
 }
-
+/*
 function countMixedBag() {
     return localDanceDatabase.filter(d => d.playlist === "Mixed Bag").length;
 }
-
+*/
 /* ============================================
    MAIN RENDERER
 ============================================ */
@@ -622,14 +622,9 @@ if (lastNavigationMode === "user-playlist" && activeUserPlaylistView !== null) {
 
         let playlistTracks = [];
 
-        if (selectedActivePlaylistGroup === "Mixed Bag") {
-            playlistTracks = localDanceDatabase
-                .filter(track => track.playlist === "Mixed Bag")
-                .filter((dance, index, arr) =>
-                    index === arr.findIndex(d => d.name === dance.name)
-                );
+        
 
-        } else if (selectedActivePlaylistGroup === "ALL Dances") {
+        if (selectedActivePlaylistGroup === "ALL Dances") {
             playlistTracks = localDanceDatabase
                 .slice()
                 .filter((dance, index, arr) =>
@@ -769,18 +764,20 @@ if (lastNavigationMode === "user-playlist" && activeUserPlaylistView !== null) {
                 <div class="hub-card-title">Weekend (${countDay("Weekend")})</div>
             </div>
             ` : ""}
+            
+             ${countDay("Mixed Bag") > 0 ? `
+            <div class="hub-card" onclick="openHubPlaylist(4)">
+                <div class="hub-card-title">Mixed Bag (${countDay("Mixed Bag")})</div>
+            </div>
+            ` : ""}
+            
 
             ${countDay("Key Vista") > 0 ? `
-            <div class="hub-card" onclick="openHubPlaylist(4)">
+            <div class="hub-card" onclick="openHubPlaylist(5)">
                 <div class="hub-card-title">Key Vista (${countDay("Key Vista")})</div>
             </div>
             ` : ""}
 
-            ${countMixedBag() > 0 ? `
-            <div class="hub-card" onclick="openHubPlaylist(5)">
-                <div class="hub-card-title">Mixed Bag (${countMixedBag()})</div>
-            </div>
-            ` : ""}
 
             ${countDifficulty("Beginner") > 0 ? `
             <div class="hub-card" onclick="openHubPlaylist(6)">
@@ -2046,8 +2043,9 @@ const hubPlaylists = [
     "Tuesday",          // 1
     "Wednesday",        // 2
     "Weekend",          // 3
-    "Key Vista",        // 4
-    "Mixed Bag",        // 5
+    "Mixed Bag",        // 4
+    "Key Vista",        // 5
+   // "Mixed Bag",        // 6
     "Beginner",         // 6
     "Improver",         // 7
     "Intermediate",     // 8
@@ -2067,6 +2065,7 @@ function openHubPlaylist(index) {
         case "Tuesday":
         case "Wednesday":
         case "Weekend":
+        case "Mixed Bag":
         case "Key Vista":
             openDayPlaylist(name);
             return;
@@ -2080,14 +2079,6 @@ function openHubPlaylist(index) {
 
         case "ALL Dances":
             selectedActivePlaylistGroup = "ALL Dances";
-            activeDayView = null;
-            activeDifficultyView = null;
-            lastNavigationMode = "playlist";
-            renderApplicationInterface();
-            return;
-
-        case "Mixed Bag":
-            selectedActivePlaylistGroup = "Mixed Bag";
             activeDayView = null;
             activeDifficultyView = null;
             lastNavigationMode = "playlist";
