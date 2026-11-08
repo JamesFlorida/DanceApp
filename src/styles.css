@@ -1126,6 +1126,7 @@ body.workspace-mode-select #workspaceContent {
    WORKSPACE — MODE BUTTONS (DESKTOP/TABLET)
    ============================================================ */
 .workspace-mode-btn {
+   background: #333;
   width: 100%;
   padding: 18px 24px;     /* increased vertical height */
   margin-bottom: 4px;     /* small gap before description */
@@ -1139,7 +1140,7 @@ body.workspace-mode-select #workspaceContent {
 }
 
 .workspace-mode-btn:hover {
-  background: #333;
+  background: #777;
   border-color: #777;
 }
 
